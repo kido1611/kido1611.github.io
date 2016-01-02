@@ -1,0 +1,179 @@
+<!doctype html>
+<!---
+	Created by 	Muhammad Abdusy Syukur - 612014061
+    			FTEK - UKSW
+	--->
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta content='index, follow' name='robots'/>
+    <meta content='Electronic and Computer Engineering Programming Contest 2014' name='title'/>
+    <meta content='Lomba Pemrograman SMA dan  SMK tingkat Nasional pada tahun 2014 yang diadakan olek Fakultas Teknik Elektro dan Komputer UKSW, ' name='description'/>
+    <meta content='Lomba Pemrograman 2014, Kompetisi Pemrograman 2014, ECEPC 2014, FTEK, UKSW, ' name='keywords'/>
+    <meta content='ECEPC 2014' name='author'/>
+    <meta content='global' name='distribution'/>
+    <meta content='general' name='rating'/>
+    <meta content='translate' name='google'/>
+    <meta content='id' name='language'/>
+    <meta content='ID' name='geo.country'/>
+    <meta content='ECEPC 2014' name='copyright'/>
+    <title>E-LPC</title>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/base-style.css" />
+    <link rel="stylesheet" href="style/desktop-style.css" />
+    <script src="script/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	jQuery(function( $ ){
+			/*back to top when refresh*/
+			$("html, body").animate({ scrollTop: 0 }, "slow");
+			
+			/*	when press top */
+			$("#top-button, #header-title, #author").click(function(e) {
+				$("html, body").animate({ scrollTop: 0 }, "slow");
+			});
+			
+			/*	show or hide navigation when scroll over line follower */
+			var block_position = 1;
+			
+			var heightBrowser = window.innerHeight
+				|| document.documentElement.clientHeight
+				|| document.body.clientHeight;
+			var offsetLF = document.getElementById("block-2").offsetTop;
+			var offsetProg = document.getElementById("block-3").offsetTop;
+			var offsetJadwal = document.getElementById("block-4").offsetTop;
+			var offsetReg = document.getElementById("block-5").offsetTop;
+			var offsetKontak = document.getElementById("block-6").offsetTop;
+			$(window).scroll(function(e) {
+                if($(this).scrollTop()>(offsetLF-20)){
+					$("header#navigation").fadeIn("fast");
+					document.getElementById("#top").style.overflow='auto';
+				}else{
+					$("header#navigation").fadeOut("fast");
+					document.getElementById("#top").style.overflow='hidden';
+				}
+				if($(this).scrollTop()>=offsetLF && $(this).scrollTop()<offsetProg){
+					block_position = 2;
+				}else if($(this).scrollTop()>=offsetProg && $(this).scrollTop()<offsetJadwal){
+					block_position = 3;
+				}else if($(this).scrollTop()>=offsetJadwal && $(this).scrollTop()<offsetReg){
+					block_position = 4;
+				}else if($(this).scrollTop()>=offsetReg && $(this).scrollTop()<offsetKontak){
+					block_position = 5;
+				}else if($(this).scrollTop()>=offsetKontak){
+					block_position = 6;
+				}
+            });
+			
+			/*	Default hide navigation	*/
+			$("header#navigation").hide();
+			
+			$("li#goto-lf").click(function(e) {
+				var offset = document.getElementById("block-2").offsetTop;
+				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
+				block_position=2;
+			});
+			$("li#goto-programming").click(function(e) {
+				var offset = document.getElementById("block-3").offsetTop;
+				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
+				block_position=3;
+			});
+			$("li#goto-jadwal").click(function(e) {
+				var offset = document.getElementById("block-4").offsetTop;
+				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
+				block_position=4;
+			});
+			$("li#goto-register").click(function(e) {
+				var offset = document.getElementById("block-5").offsetTop;
+				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
+				block_position=5;
+			});
+			$("li#goto-kontak").click(function(e) {
+				var offset = document.getElementById("block-6").offsetTop;
+				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
+				block_position=6;
+			});
+			
+			document.onkeydown=function(e){
+				switch(e.keyCode){
+					case 38:
+						if(block_position>1)
+							block_position--;
+						break;
+					case 40:
+						if(block_position<6)
+						block_position++;
+						break;
+				}	
+				var offset = document.getElementById("block-"+block_position).offsetTop;
+				$("html, body").animate({ scrollTop: offset+"px" }, "fast");
+
+			};
+		});
+    </script>
+</head>
+
+<body id="top">
+    <header id="navigation">
+        <h1 id="header-title">E-LPC</h1>
+        <nav>
+            <ul id="nav-program">
+                <li id="goto-lf">Line follower</li>
+                <li id="goto-programming">Programming</li>
+                <li id="goto-jadwal">Jadwal</li>
+                <li id="goto-register">Cara mendaftar</li>
+                <li id="goto-kontak">Hubungi kami</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="body">
+		<div class="block-info" id="block-1">
+        	<h1 id="title">E-LPC</h1>
+            <div id="tema">"ini tema"</div>
+            <div id="quick-button">
+            	<ul>
+                	<li id="goto-lf">Line follower</li>
+                    <li id="goto-programming">Programming</li>
+                </ul>
+            </div>
+        </div>
+		<div class="block-info" id="block-2">
+        	<span class="program-title">Line follower</span>
+            <div id="summary">
+            	Summary line follower
+            </div>
+        </div>
+		<div class="block-info" id="block-3">
+        	<span class="program-title">Programming</span>
+            <div id="summary">
+            	Summary programming
+            </div>
+        </div>
+		<div class="block-info" id="block-4">
+        	<span class="block-title">Jadwal</span>
+            <div id="summary">
+            	Summary jadwal
+            </div>
+        </div>
+		<div class="block-info" id="block-5">
+        	<span class="block-title">Cara mendaftar</span>
+            <div id="summary">
+            	Summary cara mendaftar
+            </div>
+        </div>
+		<div class="block-info" id="block-6">
+        	<span class="block-title">Hubungi kami</span>
+            <div id="summary">
+            	Summary contact
+            </div>
+        </div>
+    </section>
+    <footer>
+    	<span id="copy">Copyright &copy; 2016 <span id="author">E-LPC</span></span>
+        <div id="top-button">
+        	<span>Top</span>
+        </div>
+    </footer>
+</body>
+</html>
