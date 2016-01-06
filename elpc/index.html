@@ -7,18 +7,10 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta content='index, follow' name='robots'/>
-    <meta content='Electronic and Computer Engineering Programming Contest 2014' name='title'/>
-    <meta content='Lomba Pemrograman SMA dan  SMK tingkat Nasional pada tahun 2014 yang diadakan olek Fakultas Teknik Elektro dan Komputer UKSW, ' name='description'/>
-    <meta content='Lomba Pemrograman 2014, Kompetisi Pemrograman 2014, ECEPC 2014, FTEK, UKSW, ' name='keywords'/>
-    <meta content='ECEPC 2014' name='author'/>
-    <meta content='global' name='distribution'/>
-    <meta content='general' name='rating'/>
-    <meta content='translate' name='google'/>
     <meta content='id' name='language'/>
     <meta content='ID' name='geo.country'/>
-    <meta content='ECEPC 2014' name='copyright'/>
-    <title>E-LPC</title>
+    <meta content='E-LPC 2016' name='copyright'/>
+    <title>E-LPC 2016</title>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style/base-style.css" />
     <link rel="stylesheet" href="style/desktop-style.css" />
@@ -45,13 +37,6 @@
 			var offsetReg = document.getElementById("block-5").offsetTop;
 			var offsetKontak = document.getElementById("block-6").offsetTop;
 			$(window).scroll(function(e) {
-                if($(this).scrollTop()>(offsetLF-20)){
-					$("header#navigation").fadeIn("fast");
-					document.getElementById("#top").style.overflow='auto';
-				}else{
-					$("header#navigation").fadeOut("fast");
-					document.getElementById("#top").style.overflow='hidden';
-				}
 				if($(this).scrollTop()>=offsetLF && $(this).scrollTop()<offsetProg){
 					block_position = 2;
 				}else if($(this).scrollTop()>=offsetProg && $(this).scrollTop()<offsetJadwal){
@@ -62,11 +47,39 @@
 					block_position = 5;
 				}else if($(this).scrollTop()>=offsetKontak){
 					block_position = 6;
+				}else{
+					block_position = 1;
+				}
+				
+				if((block_position)!=1){
+					$("header#navigation nav ul li.active").removeClass("active");
+					var aa = $("header#navigation nav ul li").get(block_position-2);
+					aa.className="active";
+				}else{
+					$("header#navigation nav ul li.active").removeClass("active");
+				}
+				
+				if($(this).scrollTop()>(100)){
+					$("header#navigation").fadeIn("fast");
+					document.getElementById("#top").style.overflow='auto';
+				}else{
+					$("header#navigation").fadeOut("fast");
+					document.getElementById("#top").style.overflow='hidden';
 				}
             });
 			
 			/*	Default hide navigation	*/
 			$("header#navigation").hide();
+			
+			$("header#navigation nav ul li").click(function(e) {
+                if(!$(this).hasClass("active")){
+					$(document).off("scroll");
+					var indexpos = $(this).index()+1;
+					var offset = document.getElementById("block-"+(indexpos+1)).offsetTop;
+					$("html, body").stop().animate({ scrollTop: offset+"px" }, "slow");
+					block_position=indexpos;
+				}
+            });
 			
 			$("li#goto-lf").click(function(e) {
 				var offset = document.getElementById("block-2").offsetTop;
@@ -78,23 +91,16 @@
 				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
 				block_position=3;
 			});
-			$("li#goto-jadwal").click(function(e) {
-				var offset = document.getElementById("block-4").offsetTop;
-				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
-				block_position=4;
-			});
-			$("li#goto-register").click(function(e) {
-				var offset = document.getElementById("block-5").offsetTop;
-				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
-				block_position=5;
-			});
-			$("li#goto-kontak").click(function(e) {
-				var offset = document.getElementById("block-6").offsetTop;
-				$("html, body").animate({ scrollTop: offset+"px" }, "slow");
-				block_position=6;
-			});
 			
-			document.onkeydown=function(e){
+			$("button#toggle-navigation").click(function(e) {
+                $("header#navigation nav ul").fadeToggle("slow");
+				$("div#block-window").fadeToggle("slow");
+            });
+			$("div#block-window").click(function(e) {
+                $("header#navigation nav ul").fadeOut("slow");
+				$(this).fadeOut("slow");
+            });
+			/*document.onkeydown=function(e){
 				switch(e.keyCode){
 					case 38:
 						if(block_position>1)
@@ -108,7 +114,7 @@
 				var offset = document.getElementById("block-"+block_position).offsetTop;
 				$("html, body").animate({ scrollTop: offset+"px" }, "fast");
 
-			};
+			};*/
 		});
     </script>
 </head>
@@ -117,13 +123,19 @@
     <header id="navigation">
         <h1 id="header-title">E-LPC</h1>
         <nav>
+        	<button class="btn" id="toggle-navigation">
+				<span class="line"></span>
+            </button>
             <ul id="nav-program">
-                <li id="goto-lf">Line follower</li>
-                <li id="goto-programming">Programming</li>
-                <li id="goto-jadwal">Jadwal</li>
-                <li id="goto-register">Cara mendaftar</li>
-                <li id="goto-kontak">Hubungi kami</li>
+                <li >Line follower</li>
+                <li >Programming</li>
+                <li >Jadwal</li>
+                <li >Cara mendaftar</li>
+                <li >Hubungi kami</li>
             </ul>
+			<div id="block-window">
+            
+            </div>
         </nav>
     </header>
 
@@ -132,7 +144,7 @@
         	<h1 id="title">E-LPC</h1>
             <div id="tema">"ini tema"</div>
             <div id="quick-button">
-            	<ul>
+            	<ul >
                 	<li id="goto-lf">Line follower</li>
                     <li id="goto-programming">Programming</li>
                 </ul>

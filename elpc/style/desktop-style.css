@@ -8,8 +8,20 @@
 		float:right;
 	}
 
+	header#navigation nav .btn{
+	  display: none;
+	}
+
+	header#navigation div#block-window{
+		display:none;
+	}
+
 	header#navigation nav ul#nav-program{
 		list-style-type:none;
+		display:block;
+		position:absolute;
+		right:0px;
+		top:0px;
 	}
 	
 	header#navigation nav ul#nav-program li{
@@ -29,7 +41,12 @@
 	}
 
 	header#navigation nav ul#nav-program{
+		position:absolute;
+		right:0px;
+		display:none;
 		list-style-type:none;
+		top:70px;
+		z-index:10;
 	}
 	
 	header#navigation nav ul#nav-program li{
