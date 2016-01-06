@@ -15,7 +15,7 @@
 	header#navigation div#block-window{
 		display:none;
 	}
-
+	
 	header#navigation nav ul#nav-program{
 		list-style-type:none;
 		display:block;
@@ -53,4 +53,6 @@
 		text-align:right;
 	}
 
+	div#block-1 div#quick-button ul li{
+		width:120px;}
 }
