@@ -14,7 +14,7 @@ header#navigation {
 	height:70px;
 	background:#2196f3;
 	z-index:10;
-	border-bottom:solid #fff 1.8px;
+	border-bottom:solid #fff 3px;
 }
 
 header#navigation h1#header-title{
@@ -28,9 +28,6 @@ header#navigation h1#header-title{
 }
 
 header#navigation nav ul#nav-program li{
-	height:100%;
-	padding:10px;
-	line-height:50px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -122,7 +119,7 @@ header#navigation nav .btn:hover{
 
 /*	BODY	*/
 body{
-	background:#212121;
+	background:#303030;
 	color:#fff;
 	text-align:center;}
 
@@ -210,6 +207,13 @@ div#block-1, div#block-3, div#block-5{
 	background:#2196f3;
 }
 
+div.block-info span.program-title, div.block-info span.block-title{
+	font-size:40px;
+}
+
+div.block-info div#summary{
+	margin-top:20px;
+}
 
 /*	FOOTER	*/
 footer{

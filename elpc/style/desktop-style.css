@@ -26,7 +26,18 @@
 	
 	header#navigation nav ul#nav-program li{
 		float:left;
+		height:100%;
+		padding:10px;
+		line-height:50px;
 	}
+	
+	div#block-2, div#block-3,div#block-4,div#block-5,div#block-6{
+		padding-top:180px;
+		padding-left:180px;
+		padding-right:180px;
+		text-align:justify;
+	}
+
 }
 
 
@@ -47,12 +58,34 @@
 		list-style-type:none;
 		top:70px;
 		z-index:10;
+		overflow:auto;
 	}
 	
 	header#navigation nav ul#nav-program li{
 		text-align:right;
+		height:40px;
+		width:150px;
+		padding:4px;
+		line-height:40px;
+		padding-right:10px;
 	}
 
 	div#block-1 div#quick-button ul li{
 		width:110px;}
+
+	div#block-2, div#block-3,div#block-4,div#block-5,div#block-6{
+		padding-top:90px;
+		padding-left:20px;
+		padding-right:20px;
+		text-align:justify;
+	}		
+		
+	div.block-info span.program-title, div.block-info span.block-title{
+		font-size:30px;
+	}
+	
+	div.block-info div#summary{
+		margin-top:20px;
+		font-size:14px;
+	}
 }
