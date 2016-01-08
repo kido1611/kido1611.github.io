@@ -19,15 +19,15 @@
 			var offsetReg = document.getElementById("block-5").offsetTop;
 			var offsetKontak = document.getElementById("block-6").offsetTop;
 			$(window).scroll(function(e) {
-				if($(this).scrollTop()>=offsetLF && $(this).scrollTop()<offsetProg){
+				if($(this).scrollTop()>=(offsetLF-70) && $(this).scrollTop() < (offsetProg-70)){
 					block_position = 2;
-				}else if($(this).scrollTop()>=offsetProg && $(this).scrollTop()<offsetJadwal){
+				}else if($(this).scrollTop()>=(offsetProg-70) && $(this).scrollTop()<(offsetJadwal-70)){
 					block_position = 3;
-				}else if($(this).scrollTop()>=offsetJadwal && $(this).scrollTop()<offsetReg){
+				}else if($(this).scrollTop()>=(offsetJadwal-70) && $(this).scrollTop()<(offsetReg-70)){
 					block_position = 4;
-				}else if($(this).scrollTop()>=offsetReg && $(this).scrollTop()<offsetKontak){
+				}else if($(this).scrollTop()>=(offsetReg-70) && $(this).scrollTop()<(offsetReg+180)){
 					block_position = 5;
-				}else if($(this).scrollTop()>=offsetKontak){
+				}else if($(this).scrollTop()>=(offsetReg+180)){
 					block_position = 6;
 				}else{
 					block_position = 1;
@@ -41,7 +41,7 @@
 					$("header#navigation nav ul li.active").removeClass("active");
 				}
 				
-				if($(this).scrollTop()>(100)){
+				if($(this).scrollTop()>(120)){
 					$("header#navigation").fadeIn("fast");
 					document.getElementById("#top").style.overflow='auto';
 				}else{

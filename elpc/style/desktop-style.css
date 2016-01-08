@@ -31,7 +31,7 @@
 		line-height:50px;
 	}
 	
-	div#block-2, div#block-3,div#block-4,div#block-5,div#block-6{
+	div#block-2, div#block-3,div#block-4,div#block-5{
 		padding-top:180px;
 		padding-left:180px;
 		padding-right:180px;
@@ -88,4 +88,11 @@
 		margin-top:20px;
 		font-size:14px;
 	}
+	div.contact-wrapper{
+		font-size:12px;}
+	div.contact-wrapper span#title{
+		width:80px;
+		float:left;
+	}
+
 }
