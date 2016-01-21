@@ -1,0 +1,593 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Bundle params = new Bundle();\n            params.putString(\"message\", \"Contents of message\");\n            //here, token is our newly created AccessToken object\n            GraphRequest request = new GraphRequest(token, \"/pageid/feed\", params, HttpMethod.POST, new GraphRequest.Callback() {\n                public void onCompleted(GraphResponse response) {\n                    FacebookRequestError error = response.getError();\n                    if (error != null) {\n                        Log.e(\"Error\", error.getErrorMessage());\n\n                    } else {\n                        //do your own processing here for success\n                    }\n\n\n                }\n            });\n            GraphRequest.executeAndWait(request);\n        }\n    }\n\n\naci@hotmail.co.id:ahmadci3@gmail.com=muhammad abdusy syukur@muhammad_a_s\n\n\nmaaadr grup id\n1418950598368267\n\n\npage id root attack\n1416669258592096\n",
+			"settings":
+			{
+				"buffer_size": 900,
+				"line_ending": "Windows",
+				"name": "Bundle params = new Bundle();"
+			}
+		},
+		{
+			"contents": "user\nGraphRequest request = GraphRequest.newMeRequest(\n  accessToken,\n  new GraphRequest.GraphJSONObjectCallback() {\n    @Override\n    public void onCompleted(JSONObject object, GraphResponse response) {\n      // Insert your code here\n    }\n});\n\nBundle parameters = new Bundle();\nparameters.putString(\"fields\", \"id,name,first_name,middle_name,last_name,age_range,cover\");\nrequest.setParameters(parameters);\nrequest.executeAsync();\n\n\n\n\nuser feed\nGraphRequest request = GraphRequest.newGraphPathRequest(\n  accessToken,\n  \"/me/feed\",\n  new GraphRequest.Callback() {\n    @Override\n    public void onCompleted(GraphResponse response) {\n      // Insert your code here\n    }\n});\n\nBundle parameters = new Bundle();\nparameters.putString(\"fields\", \"id,message,application,type,from,link,full_picture,message_tags,with_tags,created_time,caption,description,name\");\nrequest.setParameters(parameters);\nrequest.executeAsync();\n\n\n\n\npost\nGraphRequest request = GraphRequest.newGraphPathRequest(\n  accessToken,\n  \"/10206429770440308_10206403783270645\",\n  new GraphRequest.Callback() {\n    @Override\n    public void onCompleted(GraphResponse response) {\n      // Insert your code here\n    }\n});\n\nBundle parameters = new Bundle();\nparameters.putString(\"fields\", \"id,created_time,message,message_tags,from,comments.limit(100){comment_count,id,message},likes.limit(100){name,id}\");\nrequest.setParameters(parameters);\nrequest.executeAsync();\n\n\n\ngroup\nGraphRequest request = GraphRequest.newGraphPathRequest(\n  accessToken,\n  \"/1418950598368267\",\n  new GraphRequest.Callback() {\n    @Override\n    public void onCompleted(GraphResponse response) {\n      // Insert your code here\n    }\n});\n\nBundle parameters = new Bundle();\nparameters.putString(\"fields\", \"id,name,cover,icon,email,owner\");\nrequest.setParameters(parameters);\nrequest.executeAsync();",
+			"settings":
+			{
+				"buffer_size": 1824,
+				"line_ending": "Windows",
+				"name": "user"
+			}
+		},
+		{
+			"contents": "{\n  \"data\": [\n    {\n      \"id\": \"10206429770440308_10206442735444425\",\n      \"message\": \"Testing Remix OS\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/photo.php?fbid=10206442727124217&set=a.1415317940202.2054404.1150194497&type=3\",\n      \"full_picture\": \"https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/s720x720/12376184_10206442727124217_6207293674427761900_n.jpg?oh=680f8be28908bec9531849fae4d49696&oe=56FD497D&__gda__=1463821448_ebf8acb9747dc5ebe1353ad28b98848a\",\n      \"created_time\": \"2016-01-16T03:12:37+0000\",\n      \"name\": \"Photos from Muhammad Abdusy Syukur's post\"\n    },\n    {\n      \"id\": \"10206429770440308_10206431194355905\",\n      \"message\": \"Hello World, 2nd\",\n      \"application\": {\n        \"category\": \"Utilities\",\n        \"link\": \"https://www.facebook.com/games/?app_id=535029463340641\",\n        \"name\": \"MAAADR Android\",\n        \"id\": \"535029463340641\"\n      },\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"created_time\": \"2016-01-14T05:12:29+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206421886043203\",\n      \"message\": \"Hello World :D\",\n      \"application\": {\n        \"link\": \"https://www.facebook.com/games/?app_id=1521524018171640\",\n        \"name\": \"XT-FM\",\n        \"id\": \"1521524018171640\"\n      },\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"created_time\": \"2016-01-12T13:47:08+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206421456352461\",\n      \"type\": \"link\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"http://facebook.com/\",\n      \"full_picture\": \"https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAkplWIX4gKO3M0&url=https%3A%2F%2Fwww.facebook.com%2Fimages%2Ffb_icon_325x325.png\",\n      \"created_time\": \"2016-01-12T11:31:11+0000\",\n      \"caption\": \"facebook.com\",\n      \"description\": \"Hello World\",\n      \"name\": \"Test\"\n    },\n    {\n      \"id\": \"10206429770440308_10206409401051086\",\n      \"message\": \"Sblmnya ane minta maaf sdh tag, ane minta maaf klu slm ini ada slh sengaja atau tdk sengaja. Dan terima kasih dah baik ma ane maaf ane tdk dpt bls kebaikan kalian. Skli lagi terima kasih buk N maaf!\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"No More\",\n        \"id\": \"578337578982009\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Ibn Zhalx\",\n            \"id\": \"814230685354594\"\n          },\n          {\n            \"name\": \"Abdullah Ba'agil\",\n            \"id\": \"925631427512651\"\n          },\n          {\n            \"name\": \"Ahmad Rifai\",\n            \"id\": \"967199660016936\"\n          },\n          {\n            \"name\": \"Nopi Yanto\",\n            \"id\": \"1077831508907273\"\n          },\n          {\n            \"name\": \"Anca Imut\",\n            \"id\": \"10208600734882701\"\n          },\n          {\n            \"name\": \"'Khio Gie' Gigi Biru\",\n            \"id\": \"10208396572137741\"\n          },\n          {\n            \"name\": \"Agung Adhie Nugroho\",\n            \"id\": \"10205553072771748\"\n          },\n          {\n            \"name\": \"Rio Hutabarat\",\n            \"id\": \"10208417704583039\"\n          },\n          {\n            \"name\": \"Boogie Lbc\",\n            \"id\": \"10201267763894264\"\n          },\n          {\n            \"name\": \"Agandhy Rahmat Setyawan\",\n            \"id\": \"953607594717981\"\n          },\n          {\n            \"name\": \"Dadi Rizaldi\",\n            \"id\": \"10205736865046466\"\n          },\n          {\n            \"name\": \"Steven Indarto\",\n            \"id\": \"222564641411489\"\n          },\n          {\n            \"name\": \"Nday Adjah\",\n            \"id\": \"1103766302968127\"\n          },\n          {\n            \"name\": \"Ipan Sopian\",\n            \"id\": \"1102322526454336\"\n          },\n          {\n            \"name\": \"Anna Maria Lestari\",\n            \"id\": \"1680960215495808\"\n          },\n          {\n            \"name\": \"Dedi Utomo\",\n            \"id\": \"1308250145867463\"\n          },\n          {\n            \"name\": \"Ptx Emergencyy Attack\",\n            \"id\": \"962763700437546\"\n          },\n          {\n            \"name\": \"Ramdani\",\n            \"id\": \"934188899995637\"\n          },\n          {\n            \"name\": \"Octo O\",\n            \"id\": \"915744821854336\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2016-01-10T08:58:43+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206409368210265\",\n      \"message\": \"Sudah kuduga, kamvrettttt ane dikerjain lagi\n\nAbdullah Ba'agil\nHadi Hartono\nYanu Abi Alwi\nNopi Yanto\nAgus Setiawan\nMuhammad Abdusy Syukur\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Dikdik\",\n        \"id\": \"971464002969348\"\n      },\n      \"message_tags\": [\n        {\n          \"id\": \"925631427512651\",\n          \"name\": \"Abdullah Ba'agil\",\n          \"type\": \"user\",\n          \"offset\": 46,\n          \"length\": 16\n        },\n        {\n          \"id\": \"1554228381535130\",\n          \"name\": \"Hadi Hartono\",\n          \"type\": \"user\",\n          \"offset\": 63,\n          \"length\": 12\n        },\n        {\n          \"id\": \"814230685354594\",\n          \"name\": \"Ibn Zhalx\",\n          \"type\": \"user\",\n          \"offset\": 76,\n          \"length\": 13\n        },\n        {\n          \"id\": \"1077831508907273\",\n          \"name\": \"Nopi Yanto\",\n          \"type\": \"user\",\n          \"offset\": 90,\n          \"length\": 10\n        },\n        {\n          \"id\": \"467345270134348\",\n          \"name\": \"Agus Setiawan\",\n          \"type\": \"user\",\n          \"offset\": 101,\n          \"length\": 13\n        },\n        {\n          \"id\": \"10206429770440308\",\n          \"name\": \"Muhammad Abdusy Syukur\",\n          \"type\": \"user\",\n          \"offset\": 115,\n          \"length\": 22\n        }\n      ],\n      \"created_time\": \"2016-01-10T08:44:16+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206404137439499\",\n      \"message\": \"Gw heran apa sih maunya,. Seneng banget liat orang galau\nOke kalo gitu Liat aja Hadi Senpai Abdusy sensei Bentar lagi ane gandeng Pacar\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Dikdik\",\n        \"id\": \"971464002969348\"\n      },\n      \"message_tags\": [\n        {\n          \"id\": \"1554228381535130\",\n          \"name\": \"Hadi Hartono\",\n          \"type\": \"user\",\n          \"offset\": 80,\n          \"length\": 4\n        },\n        {\n          \"id\": \"10206429770440308\",\n          \"name\": \"Muhammad Abdusy Syukur\",\n          \"type\": \"user\",\n          \"offset\": 92,\n          \"length\": 6\n        }\n      ],\n      \"created_time\": \"2016-01-09T14:10:26+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206403783270645\",\n      \"message\": \"http://maaadgroup.com/showthread.php?tid=467\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/photo.php?fbid=10206403781910611&set=a.1415317940202.2054404.1150194497&type=3\",\n      \"full_picture\": \"https://scontent.xx.fbcdn.net/hphotos-xpl1/v/t1.0-9/s720x720/1170883_10206403781910611_8932779615102636804_n.jpg?oh=f182708d93fca8da97c78d9567078f06&oe=5741BE6B\",\n      \"created_time\": \"2016-01-09T13:07:38+0000\",\n      \"name\": \"Photos from Muhammad Abdusy Syukur's post\"\n    },\n    {\n      \"id\": \"10206429770440308_10206389552434883\",\n      \"message\": \"Home battery\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/photo.php?fbid=10206389547674764&set=a.1415317940202.2054404.1150194497&type=3\",\n      \"full_picture\": \"https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/s720x720/12274553_10206389547674764_2668330902392002778_n.jpg?oh=708e7b93919c2819b12c750090274fc4&oe=573E20A9&__gda__=1463436991_9f0716fe57b12006470005b74e2aa6a5\",\n      \"created_time\": \"2016-01-06T21:03:51+0000\",\n      \"name\": \"Photos from Muhammad Abdusy Syukur's post\"\n    },\n    {\n      \"id\": \"10206429770440308_10206386253032400\",\n      \"message\": \"bringing back blur with option to cm13\n\nawesome\n\nthanks mbah dedy\n\nsensei abdussy\n\npa camat sebagai cheerleader&tester di stock 5.0 =D\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Abdullah Ba'agil\",\n        \"id\": \"925631427512651\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Nathan Ali Ashari\",\n            \"id\": \"823563431105269\"\n          },\n          {\n            \"name\": \"Dedy Prayetno\",\n            \"id\": \"1086304768098819\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2016-01-06T07:13:24+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206357158505055\",\n      \"message\": \"2 hari 2 malam diakhir tahun 2015\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Linda Puji Setyoningrum\",\n        \"id\": \"1224756684219220\"\n      },\n      \"link\": \"https://www.facebook.com/photo.php?fbid=1216489135045975&set=p.1216489135045975&type=3\",\n      \"full_picture\": \"https://fbcdn-photos-f-a.akamaihd.net/hphotos-ak-xlp1/v/t1.0-0/p180x540/995301_1216489135045975_7765289186475646056_n.jpg?oh=b480ed2f1355781a8c5ddcef484fa12b&oe=5739DA7E&__gda__=1463976856_bfc22ab72ef3c2c4feffb8b446dfb94f\",\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Bachtiar Lazuardi\",\n            \"id\": \"1037245783005955\"\n          },\n          {\n            \"name\": \"Muhammad Imam Fauzi\",\n            \"id\": \"994676650595953\"\n          },\n          {\n            \"name\": \"Bagas Wicaksono\",\n            \"id\": \"937695259612567\"\n          },\n          {\n            \"name\": \"Agung Cahyo Nugroho\",\n            \"id\": \"1095911423785650\"\n          },\n          {\n            \"name\": \"Tika Devi Utami\",\n            \"id\": \"1196700370359792\"\n          },\n          {\n            \"name\": \"Yudo Budi\",\n            \"id\": \"1286008514758428\"\n          },\n          {\n            \"name\": \"Aditya P W Gaskins\",\n            \"id\": \"1082793281744942\"\n          },\n          {\n            \"name\": \"Luqman Setya Bakti\",\n            \"id\": \"1095770633775833\"\n          },\n          {\n            \"name\": \"Shofiatun Nadya Ulfa\",\n            \"id\": \"10204245960108661\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2016-01-01T15:44:49+0000\",\n      \"name\": \"Photos from Linda Puji Setyoningrum's post\"\n    },\n    {\n      \"id\": \"10206429770440308_10206297354089982\",\n      \"message\": \"Monggo dicoba, telat share\nhttps://lightsaber.withgoogle.com/\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"created_time\": \"2015-12-23T11:02:06+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206267070572913\",\n      \"message\": \"forum.xda-developers.com/crossdevice-dev/sony-themes-apps/guide-add-weather-panel-to-lockscreen-t3273237\n\ntitle mentereng \\\"recognized contributor\nbegitu di liat postx aje gile..karya orang di comot.di rename ,di share tanpa credit apa pun,,  copot aja tu title bro,bikin malu xda aja &dev lain nte\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Abdullah Ba'agil\",\n        \"id\": \"925631427512651\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Nopi Yanto\",\n            \"id\": \"1077831508907273\"\n          },\n          {\n            \"name\": \"Nathan Ali Ashari\",\n            \"id\": \"823563431105269\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2015-12-19T11:53:04+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206263776490563\",\n      \"message\": \"10 Januari 2016\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/158237117534676/photos/a.158377290853992.31703.158237117534676/1139351399423238/?type=3\",\n      \"full_picture\": \"https://scontent.xx.fbcdn.net/hphotos-xfl1/v/t1.0-9/12345567_1139351399423238_1092282435228439140_n.jpg?oh=12e12583b6d85b3e95a09deb2459bc69&oe=57370582\",\n      \"created_time\": \"2015-12-18T21:35:00+0000\",\n      \"description\": \"Dikonfrimasi Luffy Gear 4th akan muncul pertama kali di anime di episode 725 \\\"Luapan kemarahan - aku akan menghabisi semuanya!\\\" yg akan tayang 10 Januari 2016\n\nnb: gambar gear 4th versi game One Piece: Burning Blood\",\n      \"name\": \"Oploverz\"\n    },\n    {\n      \"id\": \"10206429770440308_10206252799456144\",\n      \"message\": \"Ludwig van Beethoven at #GoogleDoodle  (y)\",\n      \"type\": \"link\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://g.co/doodle/9gqvrx\",\n      \"full_picture\": \"https://fbexternal-a.akamaihd.net/safe_image.php?d=AQB3z2DOm943JApt&url=http%3A%2F%2Fwww.google.com%2Flogos%2Fdoodles%2F2015%2Fbeethovens-245th-birthday-4687587541254144-hp2x.jpg\",\n      \"created_time\": \"2015-12-16T23:09:13+0000\",\n      \"caption\": \"google.com\",\n      \"description\": \"Bantu Beethoven dengan komposisi-nya pada Ulang Tahun ke-245 nya ! #GoogleDoodle\",\n      \"name\": \"Merayakan Tahun ke-245 Ludwig van Beethoven\"\n    },\n    {\n      \"id\": \"10206429770440308_10206228204681290\",\n      \"message\": \"CTR in real life \nhttps://youtu.be/dGOuu7K2BH0\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"created_time\": \"2015-12-12T01:02:05+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206219560665195\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/ClashofClans/photos/a.458458120845183.107663.447775968580065/1202939309730390/?type=3\",\n      \"full_picture\": \"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/t31.0-8/s720x720/12339275_1202939309730390_7007903273243908225_o.jpg\",\n      \"created_time\": \"2015-12-10T11:14:13+0000\",\n      \"description\": \"Chief, the big UPDATE is going live today! Get your Village ready!\n\nFull release notes: http://supr.cl/TH11_notes\",\n      \"name\": \"Clash of Clans\"\n    },\n    {\n      \"id\": \"10206429770440308_10206203550584953\",\n      \"message\": \"Njiir :3 \nGTA V\",\n      \"type\": \"video\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/web.gamerxd.net/videos/1514444732215930/\",\n      \"full_picture\": \"https://fbcdn-vthumb-a.akamaihd.net/hvthumb-ak-xft1/v/t15.0-10/12066795_1514464545547282_829251329_n.jpg?oh=93bed5b7f730b688713f686d946eddde&oe=57437C7C&__gda__=1463764044_479bddd1e56bbc7539a92b88164a8d26\",\n      \"created_time\": \"2015-12-07T09:17:17+0000\",\n      \"description\": \"GTA V TDFW  xD ||\nTop Mejores videos de la pagina - https://youtu.be/nXCJKIf2JxI\",\n      \"name\": \"Gamer xD\"\n    },\n    {\n      \"id\": \"10206429770440308_10206193705698837\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/ClashofClans/photos/a.458458120845183.107663.447775968580065/1199233810100940/?type=3\",\n      \"full_picture\": \"https://scontent.xx.fbcdn.net/hphotos-xpa1/t31.0-8/s720x720/12304328_1199233810100940_2003880462896945136_o.jpg\",\n      \"created_time\": \"2015-12-05T13:15:26+0000\",\n      \"description\": \"The moment we've all been waiting for! Clashers, meet our newest Hero, the GRAND WARDEN! :D\n\nSee him on attack: https://youtu.be/DYNyq47dbCo\",\n      \"name\": \"Clash of Clans\"\n    },\n    {\n      \"id\": \"10206429770440308_10206191535724589\",\n      \"message\": \"bajak sensei buat fix task manager di 12.1 :v \n\nthank you mbah :v\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Abdullah Ba'agil\",\n        \"id\": \"925631427512651\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2015-12-04T23:43:27+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206191531564485\",\n      \"message\": \"wkwk,, akhirnya\",\n      \"type\": \"photo\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"https://www.facebook.com/LucuLucuAjahh/photos/a.513286332023803.118841.512726912079745/1083413608344403/?type=3\",\n      \"full_picture\": \"https://fbcdn-sphotos-d-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/p720x720/12342520_1083413608344403_6628675893893770948_n.jpg?oh=2e3960d6375664f3c6f55d0052527997&oe=57013B04&__gda__=1459712828_6ab787fd4ee435b28310ef55585ddabc\",\n      \"created_time\": \"2015-12-04T23:41:23+0000\",\n      \"description\": \"Akhirnya Saitama menemukan lawan yg ia idam-idamkan XD\n\nCredit: Ngakakkocak\n\n#Saitama\",\n      \"name\": \"Lucu-Lucu Ajahh\"\n    },\n    {\n      \"id\": \"10206429770440308_10206189982245753\",\n      \"message\": \"blur lockscreen&expanded cm12.1 \n\nbiarpun lg rada tepar ga papa lah soalx ajib banget hasilx\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Abdullah Ba'agil\",\n        \"id\": \"925631427512651\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Budi SemogaDermawan\",\n            \"id\": \"1037766286275576\"\n          },\n          {\n            \"name\": \"Aditya Dee\",\n            \"id\": \"1069405213111619\"\n          },\n          {\n            \"name\": \"Rio Hutabarat\",\n            \"id\": \"10208417704583039\"\n          },\n          {\n            \"name\": \"Nathan Ali Ashari\",\n            \"id\": \"823563431105269\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2015-12-04T15:52:17+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206189149784942\",\n      \"message\": \"Dunia maya itu kejam kawan 😂\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Ahmad Rifai\",\n        \"id\": \"967199660016936\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Fuad Return\",\n            \"id\": \"1001779553228858\"\n          },\n          {\n            \"name\": \"Arief Shevchovski\",\n            \"id\": \"947815205253601\"\n          },\n          {\n            \"name\": \"Nopi Yanto\",\n            \"id\": \"1077831508907273\"\n          },\n          {\n            \"name\": \"Septian Aditiya\",\n            \"id\": \"1127688857250182\"\n          },\n          {\n            \"name\": \"Supri Yadi\",\n            \"id\": \"10208092034839907\"\n          },\n          {\n            \"name\": \"Al Musthofa\",\n            \"id\": \"10206813005016008\"\n          },\n          {\n            \"name\": \"Akaa Perwira Brilliant\",\n            \"id\": \"1282062778487550\"\n          },\n          {\n            \"name\": \"Wahyu Yagami\",\n            \"id\": \"1707897586105920\"\n          },\n          {\n            \"name\": \"Rendy Setiotomo\",\n            \"id\": \"1111882992195213\"\n          },\n          {\n            \"name\": \"Dadi Rizaldi\",\n            \"id\": \"10205736865046466\"\n          },\n          {\n            \"name\": \"Febri Tri Teguh S\",\n            \"id\": \"967166073375911\"\n          },\n          {\n            \"name\": \"Echaa Purnomo\",\n            \"id\": \"953768754696348\"\n          },\n          {\n            \"name\": \"Aan Diana\",\n            \"id\": \"996492287073213\"\n          },\n          {\n            \"name\": \"Ahmad Yaa Sopian\",\n            \"id\": \"10205274699779544\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2015-12-04T13:16:55+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206186724284306\",\n      \"message\": \"Status pagi ini. Yg aq pikirkan adalah \nAq tuh dr dulu merasa kasian sama para \\\"pe-smali\\\", berurusan dg bejibunnya id_public, pingin mempermudah nereka menghapus id_puvlicnya, masuk jg kedalamnya yg gkbgitu perlu jg krna cukup decon udah dapet. bahasanya jg susah di mengerti karena hasil decompile dari java. \nKasian Yg rela-rela memodifikasi apk dari apk lain, bukan membuildnya. Langsung berlari tidak merangkak terlebih dahulu. Membongkar aplikasi yg sudah jadi. Akhirnya yg mereka tau hanya:\n\n \\\"mengubek-ubek, memodifikasi, meng-compare (mencontek) atau mengambil fitur dr apk org dlm bentuk smali dg men-decompile-nya\\\" meakipun ada jg yg bljr javanya sbg dasar utama. Krna apk dihasilkn dr sana.\n\nApakah mereka tidak sadar bahwa smali sebenarnya ditujukan untuk \\\"mencuri\\\" daleman apk yg sudah jadi untuk dia ambil fiturnya, membajak, baik dg ijin ataupun enggak dikarenakan apk tersebut \\\"BUKAN OPEN SOURCE\\\" sihingga mereka men-decompile-nya agar bisa tau dan mengambilnya untuk diterapkan di apk lain, atau mengedit apk itu baik apk dia mau pun apk orglain.\n\nSebenarnya apktool bertujuan sperti itu.\n\nKenapa ya mereka tidak berpikir dari awal untuk belajar bahasa pemrogramannya yg benar, yg aplikasi itu dihasilkan dari sana yaitu pemrograman android yg basenya dari java. Karena aplikasi android dibuat dari itu. Berbeda dg smali yg dihasilkan dari mengcovert apk tsb.\nMembangun rom juga sebenarnya dari source java, c, c++ dan jg bahasa pemrograman lain. Gktuh dr apktool. :3 ato apa..\n\nApakah tidak lebih baik membangunnya daripada membongkarnya? \nApakah Bisa membuat dari awal dari nol dan asli buatannya?\nBisa menciptakan kreasi baru, inovasi baru, originalitas, ide yg bisa dituangkan, milik sendiri. Java bisa melakukannya.\n\nAq kok berpikirnya sperti itu, aq gktau smali sih, tp bisa men-decompile-nya tuk bisa mendapatkan smalinya. Gkperlu tau smali, karena membangunnya dari java yg tidakbisa dilakukan dg smali, karena smali ya hanya buat otak atik apk yg sudah jadi.\n\nGak tau kalau kalian, berinisiatif atau hanya mengikut para master decompile ? I don't know that. Menurutku sih lebih baik hulu drpd hilir, tngn diatas drpd dibawah, build drpd decompile. Gktw mwnurut kalian sperti apa cara pandangnya. Pernah mo ngajakin bareng belajar pelan2, semampu kita, setidaknya bisa membuat aplikasi yg dihasilkan sendiri, buah oemikirannya sendiri, tapi malu. Seneng kalau ada yg sejalan berpikir ke java dulu bukan smali.\nJava tutorial bejibun, ladangnya, dan apk hasil panennya. Lambatnya berpikir, ketidakmampuan materi, bukan halangan bagiku.\n\nIni sharing pikian yah, berbagi pemahaman. jgn dianggap menggurui atau sok jago, sok master. Aq gkseperti itu, aq jg masih bljr, blum tau bnyk, cara pandang tiap org beda beda. Kemampuan org jg berbeda beda tergantung ke-biasa-annya.\n\nKalau sudah terbiasa mudah, mau terbiasa bongkar apk lain yg bukan dr kita atau?? terbiasa membuat aplikasi itu justru lebih indah. Harapanku sperti itu.\nHingga Pemuda pemudi Indonesia bisa menciptakan sesuatu inovasi karya. Legal dan manfaat.\",\n      \"type\": \"status\",\n      \"from\": {\n        \"name\": \"Suyono Ion\",\n        \"id\": \"955482261206149\"\n      },\n      \"with_tags\": {\n        \"data\": [\n          {\n            \"name\": \"Ibn Zhalx\",\n            \"id\": \"814230685354594\"\n          },\n          {\n            \"name\": \"Abdullah Ba'agil\",\n            \"id\": \"925631427512651\"\n          },\n          {\n            \"name\": \"Mak Ye\",\n            \"id\": \"159067547796710\"\n          },\n          {\n            \"name\": \"Diecky Pramana Sumaga\",\n            \"id\": \"1127029240655076\"\n          },\n          {\n            \"name\": \"Muhammad Abdusy Syukur\",\n            \"id\": \"10206429770440308\"\n          }\n        ]\n      },\n      \"created_time\": \"2015-12-03T23:44:20+0000\"\n    },\n    {\n      \"id\": \"10206429770440308_10206117015621633\",\n      \"message\": \"\\\"Bagai sebuah kok bulu tangkis, hidup selalu dipermainkan dan ditusuk dari belakang\\\" \n:v\",\n      \"type\": \"link\",\n      \"from\": {\n        \"name\": \"Muhammad Abdusy Syukur\",\n        \"id\": \"10206429770440308\"\n      },\n      \"link\": \"http://puu.sh/lirdh/4002d4e7cf.gif\",\n      \"full_picture\": \"https://fbexternal-a.akamaihd.net/safe_image.php?d=AQC3LGRvvylnK7yr&url=http%3A%2F%2Fpuu.sh%2Flirdh%2F4002d4e7cf.gif\",\n      \"created_time\": \"2015-11-19T19:52:16+0000\",\n      \"caption\": \"puu.sh\",\n      \"name\": \"puu.sh\"\n    }\n  ],\n  \"paging\": {\n    \"previous\": \"https://graph.facebook.com/v2.5/10206429770440308/feed?fields=id,message,application,type,from,link,full_picture,message_tags,with_tags,created_time,caption,description,name&format=json&since=1452913957&access_token=CAAHmm0EbVmEBACpLNxgdZAZBZAgQoqEb8P7kpTltINm0NHxEJ294tMQwaSSIZBCEwWAnBy8Ps6MAwWKdcfRjqX6lz5WZCZAIrPQrp5pXJ2C0Eh7qopuaf5m2fayTG078dcitFnmcOHzvVEZATuncFoPNl5YYYLq8R0i5FZAhUpsS6vLFfcvScowEbYSZBCjRl3l62dvbxJO4K9QZDZD&limit=25&__paging_token=enc_AdAXBcSfwk1mKqDAcaIPtdVmEFDSA9El3iL1RmngDVZAtFAEdLGM1ITq5YbeKXTjg1Q17pn95c2PbHcWCQ0m2dXsZA&__previous=1\",\n    \"next\": \"https://graph.facebook.com/v2.5/10206429770440308/feed?fields=id,message,application,type,from,link,full_picture,message_tags,with_tags,created_time,caption,description,name&format=json&access_token=CAAHmm0EbVmEBACpLNxgdZAZBZAgQoqEb8P7kpTltINm0NHxEJ294tMQwaSSIZBCEwWAnBy8Ps6MAwWKdcfRjqX6lz5WZCZAIrPQrp5pXJ2C0Eh7qopuaf5m2fayTG078dcitFnmcOHzvVEZATuncFoPNl5YYYLq8R0i5FZAhUpsS6vLFfcvScowEbYSZBCjRl3l62dvbxJO4K9QZDZD&limit=25&until=1447962736&__paging_token=enc_AdCd7gX0LUZBZC3S5UgwLtyfNJwsfDfKT7CxZBRlCCWVrZBbb8oj7WBEAqtSEU5OVcohq2wYv7YI0x7i3QtT5O5oDheP\"\n  }\n}",
+			"settings":
+			{
+				"buffer_size": 25572,
+				"line_ending": "Windows",
+				"name": "{"
+			}
+		},
+		{
+			"file": "/F/StayOS-Workspace/FacebookExample/app/src/main/java/kido1611/facebookexample/Test.java",
+			"settings":
+			{
+				"buffer_size": 6988,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "#Guide diagram versi Rendy oblax\n\ndi sini ane akan share guide diagram punya nya mbah serajr khusus yang sudah pasang view pager\ntapi masih force close\nbiar semua bisa ngerasaian diagram hihihihi :D\n\n[perhatian!]\n#guide ini dapat menyebabkan kegantengan, jadi resiko di tanggung pemenang\n\n\nstep #1\ndecompile systemUI\nmerge bahan nya ke habitat nya masing masing\n\nbuka res - values string.xml dan copy script di bawah ini dan paste di paling bawah di atas \n</resorces>\n\n<string name=\"cpu_label\">CPU</string>\n    <string name=\"memory_label\">MEMORY</string>\n    <string name=\"traffic_label\">TRAFFIC SIM1</string>\n    <string name=\"traffic_label_sim2\">TRAFFIC SIM2</string>\n    <string name=\"signal_label\">SIGNAL</string>\n    <string name=\"unkown_label\">UNKOWN</string>\n    <string name=\"battery_label\">BATTERY</string>\n    <string name=\"battery_history_days\">%1$dd %2$dh %3$dm %4$ds</string>\n    <string name=\"battery_history_hours\">%1$dh %2$dm %3$ds</string>\n    <string name=\"battery_history_minutes\">%1$dm %2$ds</string>\n    <string name=\"battery_history_seconds\">%1$ds</string>\n    <string name=\"battery_stats_on_battery\">%1$s on battery</string>\n    <string name=\"current\">current: %1$s</string>\n    <string name=\"current_rate\">currently used: %1$s</string>\n    <string name=\"total_traffic\">total:</string>\n    <string name=\"current_sim1\">sim1: %1$s</string>\n    <string name=\"current_sim2\">sim2: %1$s</string>\n    <string name=\"today_traffic\">today: %1$s</string>\n    <string name=\"sim_1\" />\n    <string name=\"sim_2\" />\n    \n    buka res - values ids.xml dan copy script di bawah ini dan paste di paling bawah di atas \n</resorces>\n\n    <item type=\"id\" name=\"switchlayout\">false</item>\n\nsave - recompile - dan decompile lagi\n\nstep #2\nperang akan di mulai minum kopi nya biar ganteng :D hahaaha\n\nmasuk phonestatusbar.smali\nbuka - smali - com - android - systemUI - statusbar-phone-phonestatusbar.smali\n\nsearch .field mSystemUiVisibility:I \n	, lalu tambahkan line berikut tepat di atasnya :\n	\n	.field mSwitchLayout:Lcom/android/systemui/statusbar/phone/SwitchLayout;\n\nsearch (.method private se)  next ampe habis lalu taruh di atas nya\n\ncopy script di bawah ini :\n\n.method private setupSwitchLayout()V\n    .locals 5\n\n    .prologue\n    .line 90\n    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mContext:Landroid/content/Context;\n\n    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;\n\n    move-result-object v1\n\n    const-string v2, \"switchlayout\"\n\n    const-string v3, \"id\"\n\n    iget-object v4, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mContext:Landroid/content/Context;\n\n    invoke-virtual {v4}, Landroid/content/Context;->getPackageName()Ljava/lang/String;\n\n    move-result-object v4\n\n    invoke-virtual {v1, v2, v3, v4}, Landroid/content/res/Resources;->getIdentifier(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I\n\n    move-result v0\n\n    .line 91\n    .local v0, resIdSwitchLayout:I\n    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mSlidersLayout:Landroid/view/View;\n\n    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;\n\n    move-result-object v1\n\n    check-cast v1, Lcom/android/systemui/statusbar/phone/SwitchLayout;\n\n    iput-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mSwitchLayout:Lcom/android/systemui/statusbar/phone/SwitchLayout;\n\n    .line 92\n    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mSwitchLayout:Lcom/android/systemui/statusbar/phone/SwitchLayout;\n\n    invoke-virtual {v1}, Lcom/android/systemui/statusbar/phone/SwitchLayout;->startTask()V\n\n    .line 93\n    return-void\n.end method\n\n\nsearch script ini\n\n    invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->resetUserSetupObserver()V\n\ncopy script ini di bawah nya\n\n    invoke-direct/range {p0 .. p0}, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->setupSwitchLayout()V\n\n\nstep #3\nbuka smali/com/android/systemui/statusbar/phone/SwitchLayout.smali\n		cari ID dibawah ini dan ganti dengan ID public anda\n		\n0x7f0b0276 type=\"string\" name=\"battery_history_days\"\n\n0x7f0b0277 type=\"string\" name=\"battery_history_hours\"\n\n0x7f0b0278 type=\"string\" name=\"battery_history_minutes\"\n\n0x7f0b0279 type=\"string\" name=\"battery_history_seconds\"\n\nbuka smali/com/android/systemui/statusbar/phone/SwitchLayout$DotLineView.smali\n		cari ID dibawah ini dan ganti dengan ID public anda\n		\n0x7f0b0274 type=\"string\" name=\"unkown_label\"\n\n0x7f0b026f type=\"string\" name=\"cpu_label\"\n\n0x7f0b0270 type=\"string\" name=\"memory_label\"\n\n0x7f0b0273 type=\"string\" name=\"signal_label\"\n\n0x7f0b0275 type=\"string\" name=\"battery_label\"\n\n0x7f0b0271 type=\"string\" name=\"traffic_label\"\n\n0x7f0b0272 type=\"string\"name=\"traffic_label_sim2\"\n\nbuka smali/com/android/systemui/statusbar/phone/SwitchLayout$SwitchView.smali\n\n		cari ID dibawah ini dan ganti dengan ID public anda\n\n0x7f0b027c type=\"string\" name=\"current_rate\"				<(ada 2 ID)>\n\n0x7f0b027d type=\"string\" name=\"total_traffic\"				<(ada 3 ID)>\n\n0x7f0b0280 type=\"string\" name=\"today_traffic\"				<(ada 2 ID)>\n\nsave - recompile - sign - push\n\nbuat yang masih bingung penempatan smalinya bisa compare phonestatusbar.smali punya ane ada di folder compare\n\ndi tulis oleh : Rendy oblax\n\ncredit & special thank :\nserajr\nadi sukahadi\nsherly aristya\nagus rambak\nandika kretek kretek\nMAAAD group\nand you\n\n#keep oprek jangan takut force close ! :D hihihi\n\n",
+			"file": "/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.454/Guide diagram (Rendy oblax).xml",
+			"file_size": 5490,
+			"file_write_time": 130856983200000000,
+			"settings":
+			{
+				"buffer_size": 5485,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++ Single File.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/G/readme.txt",
+		"/G/serial/Readme.txt",
+		"/C/Users/Kido1611/Documents/MATLAB/coba 2.mat",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.862/item_timeline.xml",
+		"/F/StayOS-Workspace/MAAADRGroup/app/src/main/AndroidManifest.xml",
+		"/F/StayOS-Workspace/MAAADRGroup/app/src/main/res/values/strings.xml",
+		"/F/StayOS-Workspace/MAAADRGroup/app/build.gradle",
+		"/F/StayOS-Workspace/MAAADRAndroid/app/build/outputs/apk/log.xml",
+		"/F/Need for Speed Most Wanted/Nfsmw.reg",
+		"/F/StayOS-Workspace/MAAADRAndroid/app/src/main/java/id/kido1611/maaadr/android/newstatus/MainActivity.java",
+		"/F/StayOS-Workspace/MAAADRGroup/app/src/main/java/id/kido1611/maaadr/android/MainActivity.java",
+		"/F/StayOS-Workspace/MAAADRGroup/app/src/main/java/id/kido1611/maaadr/android/LoginActivity.java",
+		"/F/StayOS-Workspace/MAAADRGroup/app/src/main/java/id/kido1611/maaadr/android/dialog/NewStatus.java",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/AndroidManifest.xml",
+		"/F/adt-bundle-windows-x86-20130917/sdk/extras/android/support/design/res/values/attrs.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.850/api.php",
+		"/C/xampp/apps/mybb/htdocs/api.php",
+		"/C/xampp/apps/mybb/htdocs/mybbapi.php",
+		"/F/StayOS-Workspace/MAAADRAndroid/app/src/main/res/values/strings.xml",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/res/values/strings.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.680/TimeLineAdapter.java",
+		"/F/StayOS-Workspace/MAAADRGroup/log.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.876/TimelineView.java",
+		"/F/StayOS-Workspace/StayTiket/src/id/stayos/tiket/json/JSONParser.java",
+		"/F/StayOS-Workspace/StayTiket/src/id/stayos/tiket/fragment/TiketList.java",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/java/kido1611/facebookexample/Test.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Scrumptious/res/layout/picker_image.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Scrumptious/AndroidManifest.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Scrumptious/src/com/example/scrumptious/PickerActivity.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Scrumptious/src/com/example/scrumptious/picker/PickerFragment.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Iconicus/res/layout/grid_cell.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Iconicus/res/layout/choice_cell.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Iconicus/res/layout/activity_main.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/RPSSample/res/layout/content_fragment.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/RPSSample/res/layout/usersettings_fragment.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/RPSSample/res/layout/rps_fragment.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.193/attr.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.956/marker.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.487/SampleGridViewAdapter.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.177/AndroidManifest.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.209/SquaredImageView.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.208/sample_list_detail_detail.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.639/sample_list_detail_list.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.879/sample_list_detail_item.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.582/item_timeline.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.983/TimelineView.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.200/AndroidManifest.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.664/TimeLineViewHolder.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.084/content_main.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.609/FeedListAdapter.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.582/TimeLineAdapter.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.843/TimeLineViewHolder.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.305/TimeLineModel.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.103/MainActivity.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.406/activity_main.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.506/content_main.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.140/build.gradle",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.193/build.gradle",
+		"/F/StayOS-Workspace/StayTiket/src/id/stayos/tiket/fragment/ViewTiket.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.534/TimelineView.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.209/LineType.java",
+		"/F/StayOS-Workspace/FacebookExample/log.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.603/action_bar.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.740/demo.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.950/toolbar.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.262/AndroidManifest.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.936/MainActivity.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.344/FragmentDrawer.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.223/MainActivity.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.351/activity_main.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.565/fragment_navigation_drawer.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.399/styles.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.625/toolbar.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.261/styles.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.061/dimens.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.897/sample_gallery_activity.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.755/SampleGalleryActivity.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.970/NavigationDrawerAdapter.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.658/FragmentDrawer.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.945/strings.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.521/NavDrawerItem.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.900/MainActivity.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.301/MainActivity.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.732/toolbar.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.665/toolbar.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.907/fragment_navigation_drawer.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.282/activity_main.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.561/fragment_home.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.368/FragmentDrawer.java",
+		"/F/StayOS-Workspace/StayTiket/src/id/stayos/tiket/model/TiketAdapter.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.981/strings.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.608/fragment_navigation_drawer.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.216/activity_main.xml",
+		"/F/StayOS-Workspace/Maaadr2/app/src/main/java/in/ds/android/LoginActivity.java",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/res/layout/activity_main.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/HelloFacebookSample/src/com/example/hellofacebook/HelloFacebookSampleActivity.java",
+		"/C/Users/Kido1611/.gradle/gradle.properties",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/res/values/styles.xml",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.511/AndroidManifest.xml",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/res/layout/content_main.xml",
+		"/F/StayOS-Workspace/FacebookExample/app/build.gradle",
+		"/F/StayOS-Workspace/FacebookExample/app/src/main/res/values/dimens.xml",
+		"/F/StayOS-Workspace/FacebookExample/gradlew",
+		"/F/StayOS-Workspace/FacebookExample/gradlew.bat",
+		"/F/StayOS-Workspace/FacebookExample/gradle/wrapper/gradle-wrapper.properties",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/HelloFacebookSample/res/values/strings.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/HelloFacebookSample/AndroidManifest.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/HelloFacebookSample/src/com/example/hellofacebook/HelloFacebookBroadcastReceiver.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/RPSSample/src/com/example/rps/MainActivity.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/RPSSample/res/layout/main.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/MessengerSendSample/src/main/res/layout/main_activity.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/MessengerSendSample/src/main/java/com/facebook/samples/messenger/send/MainActivity.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/MessengerSendSample/src/main/java/com/facebook/samples/messenger/send/MessengerSendSampleApplication.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/HelloFacebookSample/res/layout/main.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Scrumptious/src/com/example/scrumptious/MainActivity.java",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/Iconicus/Iconicus.iml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/settings.gradle",
+		"/E/Android Studio/android-studio/bin/studio.exe - Copy.vmoptions",
+		"/E/Android Studio/android-studio/bin/studio.exe.vmoptions",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/build.gradle",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2.iml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/gradle.properties",
+		"/E/Project/StayOS/KK/Base/BatteryWarning/BatteryWarning/res/layout/battery_warning.xml",
+		"/F/Android Source Code/facebook/facebook-android-sdk-sdk-version-4.8.2/facebook-android-sdk-sdk-version-4.8.2/samples/HelloFacebookSample/build.gradle",
+		"/C/xampp/apps/mybb/htdocs/index.php",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.456/Wordpress.java",
+		"/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.595/Main.java",
+		"/C/xampp/apps/mybb/htdocs/api/api.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"validatete",
+			"mCallBackManager",
+			"id.kido1611.maaadr.android.newstatus",
+			"maaadr",
+			"androidruntime",
+			"nexturl",
+			"json f",
+			"json ",
+			"Nexturl",
+			"nexurl",
+			"nextU",
+			"androidruntime",
+			"runtime",
+			"androidruntime",
+			"timeline",
+			"facebook g",
+			"facebook",
+			"androidruntime",
+			"drawerListener",
+			"FragmentDrawer",
+			"Cover",
+			"log ",
+			"androidruntime",
+			"image",
+			"Facebook get",
+			"androidruntime",
+			"f/zoV96PwSXpeYpXbW3g68nujaQ=",
+			"mProfileTracker",
+			"androidruntime",
+			"shareDialog",
+			"performPublish",
+			"postStatusUpdate",
+			"profileTracker",
+			"PendingAction",
+			"handlePendingAction",
+			"androidruntime",
+			"profilePictureView\n",
+			"updateUI()",
+			"updateui",
+			"androidruntime",
+			"onClickPostStatusUpdate",
+			"$lang",
+			"$lang=",
+			"$lang==",
+			"register",
+			"$lang",
+			"add_breadcrumb",
+			"nav_register",
+			"register",
+			"login",
+			"register",
+			"start",
+			"battery_low",
+			"oncrece",
+			"attachLowBatterySound",
+			"showWarningNotification",
+			"updateNotification",
+			"constructor",
+			"v9",
+			"0x6",
+			"0x5",
+			"0x7f0a0143",
+			"mDotLineView",
+			"handler",
+			"battery",
+			"mOpenBatterySettings",
+			"ACTION_SHOW_BATTERY_SETTINGS",
+			"pendingBroadcast",
+			"showStartSaverConfirmation",
+			"dismissLowBatteryNotification\n",
+			"slow",
+			"mInvalidCharger",
+			"showInvalidChargerNotification",
+			"mNoMan",
+			"playLowBatterySound",
+			"mNoMan",
+			"nno",
+			"updateNotification",
+			"dismissLowBatteryNotification",
+			"dismiss"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 900,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								844,
+								860
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Bundle params = new Bundle();",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1824,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1824,
+								1824
+							]
+						],
+						"settings":
+						{
+							"auto_name": "user",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 455.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 25572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25572,
+								25572
+							]
+						],
+						"settings":
+						{
+							"auto_name": "{",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 10146.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/F/StayOS-Workspace/FacebookExample/app/src/main/java/kido1611/facebookexample/Test.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5884,
+								6363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2285.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/Users/Kido1611/AppData/Local/Temp/Rar$DIa0.454/Guide diagram (Rendy oblax).xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5485,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5209,
+								5209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 140.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/C++/C++ Single File.sublime-build",
+	"project": "elpc.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
