@@ -83,32 +83,6 @@ header#navigation nav .btn{
   transition: background .3s;
 }
 
-header#navigation nav .line{
-  display: block;
-  position: absolute;
-  top: 7px;
-  left: 8px;
-  right: 8px;
-  width: 55%;
-  height: 4px;
-  background: white;
-}
-header#navigation nav .line::after, header#navigation nav .line::before{
-  position: absolute;
-  display: block;
-  left: 0;
-  height: 4px;
-  background-color: white;
-  content: "";
-  width: 100%;
-}
-header#navigation nav .line::after{
-  top:8px;
-}
-header#navigation nav .line::before{
-  top:16px;
-}
-
 header#navigation nav .btn:hover{
   background:#0277bd;
   -ms-transition: background ease 0.2s; /* IE 9 */
@@ -231,7 +205,7 @@ div.block-info div#summary div.contact-wrapper{
 	margin-bottom:5px;}
 
 div.contact-wrapper span#title{
-	width:100px;
+	width:50px;
 	float:left;
 }
 div.contact-wrapper span#summary{

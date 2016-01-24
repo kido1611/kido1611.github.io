@@ -73,6 +73,15 @@
 	div#block-1 div#quick-button ul li{
 		width:110px;}
 
+	div#block-1 h1#title{
+		line-height:200px;
+	}
+
+	div#block-1 div#tema{
+		line-height:40px;
+		margin-bottom: 60px;
+	}
+
 	div#block-2, div#block-3,div#block-4,div#block-5,div#block-6{
 		padding-top:90px;
 		padding-left:20px;
@@ -91,7 +100,7 @@
 	div.contact-wrapper{
 		font-size:12px;}
 	div.contact-wrapper span#title{
-		width:80px;
+		width:50px;
 		float:left;
 	}
 
