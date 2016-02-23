@@ -1,114 +1,167 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE HTML>
-<!---
-	Created by 	Muhammad Abdusy Syukur - 612014061
-    			FTEK - UKSW
-	-->
-<html xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <meta content='id' name='language'/>
-    <meta content='ID' name='geo.country'/>
-    <meta content='E-LPC 2016' name='copyright'/>
-    <title>E-LPC 2016</title>
-	<link rel="icon" type="image/png" href="favicon.png" />
-    <link href='https://fonts.googleapis.com/css?family=Montserrat|Lato' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style/base-style.css" />
-    <link rel="stylesheet" href="style/desktop-style.css" />
-    <script src="script/jquery-1.9.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript" src="script/main.js"></script>
-</head>
-
-<body id="top">
-    <header id="navigation">
-        <h1 id="header-title">E-LPC</h1>
-        <nav>
-        	<button class="btn" id="toggle-navigation">
-				<i class="fa fa-bars fa-2x fa-inverse"></i>
-            </button>
-            <ul id="nav-program">
-                <li >Line follower</li>
-                <li >Programming</li>
-                <li >Jadwal</li>
-                <li >Cara mendaftar</li>
-                <li >Hubungi kami</li>
-            </ul>
-			<div id="block-window"/>
-        </nav>
-    </header>
-
-    <section id="body">
-		<div class="block-info" id="block-1">
-        	<h1 id="title">E-LPC</h1>
-            <div id="tema">"Keep Developing, Keep Solving, Break your Algorithm"</div>
-            <div id="quick-button">
-            	<ul >
-                	<li id="goto-lf">Line follower</li>
-                    <li id="goto-programming">Programming</li>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/elpc-theme.css">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <title>E-LPC 2016</title>    
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="70" id="top">    
+        <nav class="navbar navbar-default navbar-fixed-top" id="nav-top">
+          <div class="container-fluid">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>                        
+              </button>
+              <a class="navbar-brand" href="#home">
+              	<img src="images/elpc-mini.png" class="navbar-brand" height="47px" alt="E-LPC" id="brand-logo">E-LPC
+              </a>
+            </div>
+            <div>
+              <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+                <ul class="nav navbar-nav">
+                  <li><a href="#lomba-linefollower">Line Follower</a></li>
+                  <li><a href="#lomba-programming">Programming</a></li>
+                  <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Program lain <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#workshop">Workshop</a></li>
+                      <li><a href="#seminar">Seminar</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#jadwal">Jadwal</a></li>
+                  <li><a href="#daftar">Cara mendaftar</a></li>
+                  <li><a href="#contact">Hubungi kami</a></li>
                 </ul>
+              </div>
             </div>
-        </div>
-		<div class="block-info" id="block-2">
-        	<span class="program-title">Line follower</span>
-            <div id="summary">
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.</p>
-<p>Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.</p>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.
-Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.</p>
-<p>Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.</p>
-<p>Fusce aliquet pede non pede. Suspendisse dapibus lorem pellentesque magna. Integer nulla.</p>
+          </div>
+        </nav>  
+  		<div id="content">
+            <div id="home" class="jumbotron text-center">
+                <img src="images/elpc-mini.png" width="160px" alt="E-LPC"/>
+                <h1>E-LPC</h1>
+                <br/><br/>
+                <blockquote class="blockquote-reverse">
+                    <p>Keep Developing, Keep Solving, Break your Algorithm</p>
+                </blockquote>
+                <br/><br/>
+                <a href="#lomba-linefollower" id="go-down"><i class="fa fa-angle-down fa-3x"></i></a>
             </div>
-        </div>
-		<div class="block-info" id="block-3">
-        	<span class="program-title">Programming</span>
-            <div id="summary">
-<p>Donec blandit feugiat ligula. Donec hendrerit, felis et imperdiet euismod, purus ipsum pretium metus, in lacinia nulla nisl eget sapien. Donec ut est in lectus consequat consequat.</p>
-<p>Etiam eget dui. Aliquam erat volutpat. Sed at lorem in nunc porta tristique.</p>
-<p>Proin nec augue. Quisque aliquam tempor magna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-Nunc ac magna. Maecenas odio dolor, vulputate vel, auctor ac, accumsan id, felis. Pellentesque cursus sagittis felis.</p>
-<p>Pellentesque porttitor, velit lacinia egestas auctor, diam eros tempus arcu, nec vulputate augue magna vel risus. Cras non magna vel ante adipiscing rhoncus. Vivamus a mi.</p>
-<p>Morbi neque. Aliquam erat volutpat. Integer ultrices lobortis eros.</p>
-<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin semper, ante vitae sollicitudin posuere, metus quam iaculis nibh, vitae scelerisque nunc massa eget pede. Sed velit urna, interdum vel, ultricies vel, faucibus at, quam.</p>
+            <div id="lomba-linefollower" class="container container-elpc text-justify">
+              <h1>Line Follower</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="lomba-programming" class="container container-elpc">
+              <h1>Programming</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="workshop" class="container container-elpc">
+              <h1>Workshop</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="seminar" class="container container-elpc">
+              <h1>Seminar</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="jadwal" class="container container-elpc">
+              <h1>Jadwal</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="daftar" class="container container-elpc">
+              <h1>Cara mendaftar</h1>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+              <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+            </div>
+            <div id="contact">
+                <div class="container">
+                  <h1>Hubungi kami</h1>
+                  <div class="row">
+                  	<div class="text-center icon-contact"><i class="fa fa-facebook-official fa-2x"></i></div>
+                    <div class="icon-value"><h4><a href="https://www.facebook.com/ELPC-UKSW-926156664069624" target="_blank" data-toggle="tooltip" title="Buka E-LPC di Facebook" data-placement="right">ELPC UKSW</a></h4></div>
+                  </div>
+                  <div class="row">
+                  	<div class="text-center icon-contact"><i class="fa fa-envelope-o fa-2x"></i></div>
+                    <div class="icon-value"><h4><a href="mailto:elpc.uksw@gmail.com" target="_blank" data-toggle="tooltip" title="Kirim e-mail ke E-LPC" data-placement="right">elpc.uksw@gmail.com</a></h4></div>
+                  </div>
+                  <div class="row">
+                  	<div class="text-center icon-contact"><i class="fa fa-map-marker fa-2x"></i></i></div>
+                    <div class="icon-value"><h4><a href="#" data-toggle="tooltip" title="Alamat UKSW" data-placement="right">Jl. Diponegoro 52-60 Salatiga - Indonesia 50711</a></h4></div>
+                  </div>
+                </div>
+            </div>        
+            
+            <footer class="text-center">
+                <a class="up-arrow" href="#top">
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                </a><br/><br/>
+                &copy; <a href="#top">E-LPC</a> 2016 
+            </footer>
+	    </div>
+    </body>
+    <script type="text/javascript">
+    	$(document).ready(function(e) {
+			$('[data-toggle="tooltip"]').tooltip(); 
+			
+			$(".navbar").hide();
+			$(window).scroll(function () {
 
-            </div>
-        </div>
-		<div class="block-info" id="block-4">
-        	<span class="block-title">Jadwal</span>
-            <div id="summary">
-            	Summary jadwal
-            </div>
-        </div>
-		<div class="block-info" id="block-5">
-        	<span class="block-title">Cara mendaftar</span>
-            <div id="summary">
-            	Summary cara mendaftar
-            </div>
-        </div>
-		<div class="block-info" id="block-6">
-        	<span class="block-title">Hubungi kami</span>
-            <div id="summary">
-				<div class="contact-wrapper">
-                	<span id="title"><i class="fa fa-envelope-o fa-2x"></i></span>
-                	<span id="summary"><a href="mailto:ahmadci3@gmail.com" id="email">ahmadci3@gmail.com</a></span>
-                </div>
-				<div class="contact-wrapper">
-                	<span id="title"><i class="fa fa-phone fa-2x fa-inverse"></i></span>
-                	<span id="summary"><a href="tel:+6285727758392">+62 857 2775 xxxx</a></span>
-                </div>
-				<div class="contact-wrapper">
-                	<span id="title"><i class="fa fa-map-marker fa-2x"></i></span>
-                	<span id="summary">Jl. ABCDEFG Hijklmnopqrstuvwxyz</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer>
-    	<span id="copy">Copyright &#169; 2016 <span id="author">E-LPC</span></span>
-        <div id="top-button">
-        	<span>Top</span>
-        </div>
-    </footer>
-</body>
+				if ($(this).scrollTop() > 200) {
+					$('.navbar').fadeIn();
+				} else {
+					$('.navbar').fadeOut();
+					$("#content").removeClass('blur');
+				}
+			});
+			
+			$(".navbar-toggle").click(function(e) {
+				if($("#content").hasClass('blur')){
+					$("#content").removeClass('blur');
+				}else{
+					$("#content").addClass('blur');
+				}
+            });
+			
+			$("a[href^='#']").on('click', function(e) {
+			   e.preventDefault();
+			   var hash = this.hash;
+			   $('html, body').animate({
+				   scrollTop: $(hash).offset().top
+				 }, 300, function(){
+				   window.location.hash = hash;
+				 });			
+			});			
+			$(".navbar ul li a[href^='#'], .navbar a[href^='#']").on('click', function(e) {
+			   e.preventDefault();
+			   var hash = this.hash;
+			   $('html, body').animate({
+				   scrollTop: $(hash).offset().top
+				 }, 300, function(){
+				   window.location.hash = hash;
+				 });			
+			});
+            $("footer a[href='#top']").on('click',function(event){
+				event.preventDefault();
+				var hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 900, function(){
+					window.location.hash = hash;
+				});
+			});
+        });
+    </script>
 </html>
