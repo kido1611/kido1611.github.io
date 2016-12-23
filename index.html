@@ -1,12 +1,71 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 	<head>
-		<title>Kido1611 on Github</title>
-		<meta name="google-site-verification" content="sDoQJYfHkaYpxxYplRrYhSqeztoP30R-zxLgvwfop1s" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#3F51B5">
+		<title>kido1611</title>
+
+		<link rel="stylesheet" href="css/styles.min.css">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+		<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+
+		<script src="js/main.min.js"></script>
 	</head>
-	
-	<body>
-		<h1>Sedang dibangun</h1>
+
+	<body ng-app="Kido" ng-cloak>
+		<div id="drawer" ng-controller="DrawerCtrl" ng-cloak layout="column" style="height: 100vh;">
+			<section layout="row" flex>
+				<md-sidenav class="main-sidenav md-sidenav-left" md-component-id="drawer-left" md-is-locked-open="$mdMedia('gt-sm')" md-whiteframe="4">
+					<md-toolbar class="md-theme-indigo">
+						<i class="fa fa-close fa-5x fa-lg" style="padding-left: 16px; padding-top: 23px; "></i>
+						<h1 class="md-toolbar-tools">Muhammad Abdusy Syukur</h1>
+					</md-toolbar>
+					<md-content md-scroll-y flex layout="column">
+						<md-sidemenu>
+							<md-sidemenu-group>
+								<md-sidemenu-button href="#home">Home</md-sidemenu-button>
+								<md-sidemenu-button href="#about">About</md-sidemenu-button>
+								<md-sidemenu-content md-heading="Project" md-arrow="true" >
+									<div  ng-repeat="x in drawerItems">
+										<md-sidemenu-button href="{{x.html_url}}">{{x.name}}</md-sidemenu-button>
+									</div>
+								</md-sidemenu-content>
+							</md-sidemenu-group>
+							<div>
+									<md-divider></md-divider>
+									<div layout="row" layout-align="center center">
+										<a href="http://facebook.com/muhammad.as16" target="_blank" class="socmed-button md-accent"><i class="fa fa-facebook-official fa-2x"></i></a>
+										<a href="http://github.com/kido1611" target="_blank" class="socmed-button md-accent"><i class="fa fa-github fa-2x"></i></a>
+										<a href="mailto:ahmadci3@gmail.com" target="_blank" class="socmed-button md-accent"><i class="fa fa-envelope fa-2x"></i></a>
+									</div>
+									<md-divider></md-divider>
+									<div layout="column" layout-align="start center" class="footer">
+										<div class="md-subhead">&copy; 2016 kido1611</div>
+									</div>
+								</div>
+						</md-sidemenu>
+					</md-content>
+				</md-sidenav>
+				<md-content flex layout="column">
+					<md-toolbar class="md-accent kido-toolbar" ng-hide="showToolbar" md-whiteframe="3" layout="row" layout-align="center center">
+						<div id="nav-container" layout-align="center center" ng-click="toggleDrawer()" hide-gt-sm md-ink-ripple>
+							<i class="fa fa-navicon fa-1x" id="toggleDrawer"></i>
+						</div>
+						<h1 class="md-toolbar-tools">
+							<span id="toolbar-title">Content</span>
+						</h1>
+					</md-toolbar>
+					<div ng-view="">
+
+					</div>
+				</md-content>
+			</section>
+		</div>
+
+		<script type="text/javascript" src="js/app.js"></script>
+		<script src="https://use.fontawesome.com/3ae6ff2e82.js"></script>
 	</body>
-	<a href="elpc" style="color:#fff;">elpc </a>
 </html>
